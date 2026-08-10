@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meriem & Oussama — Wedding Invitation</title>
-<meta name="description" content="Wedding invitation for Meriem & Oussama — 11 October 2026 and 13 October 2026.">
+<title>أسامة ومريم — دعوة زفاف</title>
+<meta name="description" content="دعوة زفاف لمريم وأسامة — 11 أكتوبر 2026 و13 أكتوبر 2026.">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
 
   :root {
     --ivory: #fbf8f1;
@@ -22,10 +22,18 @@
 
   body {
     margin: 0;
-    background: var(--ivory);
+    min-height: 100vh;
     color: var(--ink);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-family: "Aref Ruqaa", serif;
+    font-weight: 400;
+    background-color: var(--ivory);
+    background-image:
+      repeating-linear-gradient(45deg, rgba(173,138,82,.045) 0 1px, transparent 1px 8px),
+      repeating-linear-gradient(-45deg, rgba(173,138,82,.045) 0 1px, transparent 1px 8px),
+      radial-gradient(1200px 620px at 50% -12%, rgba(173,138,82,.12), transparent 62%),
+      radial-gradient(900px 520px at 50% 112%, rgba(173,138,82,.08), transparent 62%),
+      linear-gradient(180deg, #fdfbf6 0%, var(--ivory) 50%, #f6f1e6 100%);
+    background-attachment: fixed;
   }
 
   .hero {
@@ -37,21 +45,30 @@
     padding: 60px 22px;
     position: relative;
     overflow: hidden;
+    color: #fff;
     background:
-      radial-gradient(circle at 15% 15%, rgba(173,138,82,.10), transparent 28%),
-      radial-gradient(circle at 85% 80%, rgba(173,138,82,.08), transparent 30%),
-      var(--ivory);
+      linear-gradient(180deg, rgba(251,248,241,.12) 0%, rgba(46,36,26,.28) 45%, rgba(35,26,18,.62) 100%),
+      url("assets/imgfsfs.png") center/cover no-repeat;
   }
 
-  .hero::before, .hero::after {
-    content: "✦";
+  .hero::before {
+    content: "";
     position: absolute;
-    color: var(--gold);
-    opacity: .35;
-    font-size: 90px;
+    inset: 24px;
+    border: 1px solid rgba(255,255,255,.4);
+    outline: 1px solid rgba(224,191,122,.45);
+    outline-offset: 6px;
+    pointer-events: none;
   }
-  .hero::before { top: 55px; left: 8%; }
-  .hero::after { bottom: 55px; right: 8%; }
+
+  .hero .eyebrow {
+    color: #000;
+    text-shadow: 0 0 6px rgba(255,255,255,.4);
+  }
+  .hero .amp { color: #e0bf7a; }
+  .hero .invite-line { color: rgba(255,255,255,.92); }
+  .hero .date-line { color: #e0bf7a; }
+  .hero .scroll { color: rgba(255,255,255,.95); }
 
   .intro {
     max-width: 850px;
@@ -59,20 +76,26 @@
   }
 
   .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: .35em;
-    font-size: 11px;
+    font-size: 20px;
+    line-height: 1.7;
     color: var(--muted);
     margin-bottom: 28px;
   }
 
+  .invite-line {
+    margin: 26px 0 0;
+    font-weight: 300;
+    font-size: clamp(15px, 2.4vw, 19px);
+    line-height: 1.8;
+    color: var(--muted);
+  }
+
   h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(68px, 12vw, 150px);
-    line-height: .75;
+    font-family: "Aref Ruqaa", serif;
+    font-size: clamp(60px, 11vw, 140px);
+    line-height: 1.1;
     font-weight: 400;
     margin: 0;
-    letter-spacing: -.04em;
   }
 
   .amp {
@@ -81,15 +104,12 @@
     color: var(--gold);
     line-height: 1.3;
     margin: 15px 0;
-    font-style: italic;
   }
 
   .date-line {
-    margin-top: 34px;
-    color: var(--muted);
-    letter-spacing: .18em;
-    font-size: 12px;
-    text-transform: uppercase;
+    margin-top: 22px;
+    color: var(--gold);
+    font-size: 13px;
   }
 
   .scroll {
@@ -97,9 +117,7 @@
     margin-top: 70px;
     color: var(--gold);
     text-decoration: none;
-    font-size: 11px;
-    letter-spacing: .22em;
-    text-transform: uppercase;
+    font-size: 13px;
   }
 
   section {
@@ -111,38 +129,41 @@
     margin: auto;
   }
 
-  .quote {
-    text-align: center;
-    max-width: 650px;
-    margin: auto;
-  }
-
-  .quote .mark {
-    color: var(--gold);
-    font-family: serif;
-    font-size: 50px;
-    line-height: .5;
-  }
-
-  .quote p {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(27px, 4vw, 40px);
-    line-height: 1.15;
-    margin: 25px 0;
-  }
-
   .events {
-    background: var(--paper);
+    background: rgba(255,253,248,.82);
     border-top: 1px solid rgba(173,138,82,.18);
     border-bottom: 1px solid rgba(173,138,82,.18);
+    font-family: "Aref Ruqaa", serif;
   }
 
   .section-title {
     text-align: center;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
-    font-size: 52px;
+    font-family: "Aref Ruqaa", serif;
+    font-weight: 400;
+    font-size: 48px;
     margin: 0 0 55px;
+  }
+
+  .event-intro {
+    text-align: center;
+    font-size: clamp(20px, 3vw, 27px);
+    line-height: 1.9;
+    color: var(--ink);
+    margin: 0 auto 55px;
+    max-width: 680px;
+  }
+
+  .event-intro .soft {
+    color: var(--gold);
+  }
+
+  .closing {
+    text-align: center;
+    max-width: 650px;
+    margin: 55px auto 0;
+    line-height: 1.9;
+    color: var(--muted);
+    font-size: 20px;
   }
 
   .event-grid {
@@ -167,29 +188,22 @@
     pointer-events: none;
   }
 
-  .event-number {
-    color: var(--gold);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
+
 
   .event h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 38px;
-    font-weight: 500;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 36px;
+    font-weight: 400;
     margin: 5px 0 25px;
   }
 
   .event-date {
-    font-size: 13px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
+    font-size: 14px;
     margin-bottom: 12px;
   }
 
   .event-time {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Aref Ruqaa", serif;
     font-size: 30px;
     color: var(--gold);
     margin-bottom: 20px;
@@ -208,57 +222,99 @@
     font-size: 15px;
   }
 
-  .details {
-    text-align: center;
-  }
-
-  .details p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    line-height: 1.9;
-    color: var(--muted);
-  }
-
-  .calendar-button {
+  .map-link {
     display: inline-block;
-    padding: 13px 24px;
-    border: 1px solid var(--gold);
-    color: var(--ink);
+    margin-top: 18px;
+    padding: 8px 18px;
+    border: 1px solid var(--line);
+    color: var(--gold);
     text-decoration: none;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .16em;
+    font-size: 13px;
     transition: .25s;
   }
 
-  .calendar-button:hover {
+  .map-link:hover {
     background: var(--gold);
     color: white;
   }
 
+  .countdown-section {
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .countdown-section .section-title {
+    font-size: 32px;
+    margin-bottom: 26px;
+  }
+
+  .countdown-sub {
+    margin: 0 0 30px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .count-box {
+    min-width: 74px;
+    padding: 14px 10px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 0 10px 22px rgba(61,55,45,.07);
+  }
+
+  .count-box strong {
+    display: block;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--gold);
+  }
+
+  .count-box span {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .details {
+    text-align: center;
+    padding-bottom: 24px;
+  }
+
+  .details p {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: var(--muted);
+  }
+
+
   footer {
     text-align: center;
     padding: 80px 20px;
-    background: #f4efe5;
+    background: rgba(244,239,229,.9);
   }
 
   footer .names {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 50px;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 48px;
   }
 
   footer p {
     color: var(--muted);
-    font-size: 11px;
-    letter-spacing: .18em;
-    text-transform: uppercase;
+    font-size: 13px;
   }
 
-  .heart {
-    color: var(--gold);
-    font-size: 20px;
-    margin-top: 20px;
-  }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -268,7 +324,7 @@
   @media (max-width: 700px) {
     .event-grid { grid-template-columns: 1fr; }
     section { padding: 70px 18px; }
-    .hero::before, .hero::after { font-size: 55px; }
+    .hero::before { inset: 16px; outline-offset: 4px; }
   }
 </style>
 </head>
@@ -276,76 +332,90 @@
 <body>
   <header class="hero">
     <div class="intro">
-      <div class="eyebrow">Together with their families</div>
+      <div class="eyebrow">عائلة بوعلي و عائلة سعيِّد يتشرفو بدعوتكم للإحتفال بزواج إبنَيْهما </div>
       <h1>
-        Meriem
-        <span class="amp">&amp;</span>
-        Oussama
+        أسامة
+        <span class="amp">و</span>
+        مريم
       </h1>
-      <div class="date-line">October 2026 · Two celebrations · One beautiful beginning</div>
-      <a class="scroll" href="#celebration">Discover our celebration ↓</a>
+      <p class="invite-line">نتمنّاو تشاركونا فرحتنا<br></p>
+      <div class="date-line">13 أكتوبر 2026</div>
+      <a class="scroll" href="#events">↓</a>
     </div>
   </header>
 
-  <section id="celebration">
-    <div class="section-inner">
-      <div class="quote">
-        <div class="mark">“</div>
-        <p>Two hearts, one story,<br>and a lifetime to begin.</p>
-        <div class="mark">”</div>
-      </div>
-    </div>
-  </section>
-
   <section class="events" id="events">
     <div class="section-inner">
-      <h2 class="section-title">Our Celebrations</h2>
+
+      <p class="event-intro">
+        يا للّا ويا سيدي، الفرحة ما تكمل كان بيكم<br>
+        <span class="soft">بكل ود ومحبة، نستدعاوكم تشاركونا لمتنا وفرحتنا الكبيرة</span>
+      </p>
 
       <div class="event-grid">
         <article class="event">
-          <div class="event-number">01</div>
-          <h3>Outeiya</h3>
-          <div class="event-date">11 October 2026</div>
+          <h3>الوطية</h3>
+          <div class="event-date">11 أكتوبر 2026</div>
           <div class="event-time">20:30</div>
           <div class="place">
-            <strong>Kobbet El Enhass</strong>
-            Tunis, Tunisia
+            <strong>قصر قبة النحاس</strong>
+            تونس
           </div>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Kobbet+Ennhas+Palace+Tunis" target="_blank" rel="noopener">البلاصة ←</a>
         </article>
 
         <article class="event">
-          <div class="event-number">02</div>
-          <h3>Wedding Day</h3>
-          <div class="event-date">13 October 2026</div>
+          <h3> نهار العرس</h3>
+          <div class="event-date">13 أكتوبر 2026</div>
           <div class="event-time">16:30</div>
           <div class="place">
-            <strong>Dar Bouraoui</strong>
-            Tunis, Tunisia
+            <strong>دار بوراوي</strong>
+            تونس
           </div>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dar+Bouraoui+Tunis" target="_blank" rel="noopener">البلاصة   ←</a>
         </article>
       </div>
+
+      <p class="closing">
+حضوركم يشرّفنا و يفرّحنا، ربي يفرح قلوبكم و يزين أيامكم
+      </p>
     </div>
   </section>
 
-  <section class="details">
+  <section class="countdown-section">
     <div class="section-inner">
-      <h2 class="section-title">Come Celebrate With Us</h2>
-      <p>
-        We would be delighted to have you with us as we celebrate
-        these two special days and begin this new chapter together.
-      </p>
-      <a class="calendar-button"
-         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meriem%20%26%20Oussama%20%E2%80%94%20Wedding%20Day&dates=20261013T163000/20261013T230000"
-         target="_blank" rel="noopener">
-        Add Wedding Day to Calendar
-      </a>
+      <div class="countdown">
+        <div class="count-box"><strong id="cd-days">00</strong><span>أيام</span></div>
+        <div class="count-box"><strong id="cd-hours">00</strong><span>ساعات</span></div>
+        <div class="count-box"><strong id="cd-minutes">00</strong><span>دقائق</span></div>
+        <div class="count-box"><strong id="cd-seconds">00</strong><span>ثوانٍ</span></div>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div class="names">Meriem &amp; Oussama</div>
-    <p>With love · October 2026</p>
-    <div class="heart">✦</div>
+    <div class="names">أسامة ومريم</div>
+    <p>بكل الحب · أكتوبر 2026</p>
   </footer>
+
+  <script>
+    (function () {
+      const target = new Date("2026-10-13T16:30:00").getTime();
+      const pad = (n) => String(n).padStart(2, "0");
+      function tick() {
+        const diff = Math.max(0, target - Date.now());
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const minutes = Math.floor((diff % 3600000) / 60000);
+        const seconds = Math.floor((diff % 60000) / 1000);
+        document.getElementById("cd-days").textContent = pad(days);
+        document.getElementById("cd-hours").textContent = pad(hours);
+        document.getElementById("cd-minutes").textContent = pad(minutes);
+        document.getElementById("cd-seconds").textContent = pad(seconds);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
 </body>
 </html>
