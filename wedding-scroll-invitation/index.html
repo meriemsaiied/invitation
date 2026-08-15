@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أسامة ومريم — دعوة زفاف</title>
+<title>أسامة و مريم — دعوة زفاف</title>
 <meta name="description" content="دعوة زفاف لمريم وأسامة — 11 أكتوبر 2026 و13 أكتوبر 2026.">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
@@ -72,14 +72,28 @@
 
   .intro {
     max-width: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
     animation: fadeUp 1.2s ease both;
+    padding-top: 10px;
   }
 
   .eyebrow {
     font-size: 20px;
     line-height: 1.7;
     color: var(--muted);
-    margin-bottom: 28px;
+    margin: 0 auto 28px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .eyebrow .and {
+    color: var(--gold);
+    margin: 0 20px;
   }
 
   .invite-line {
@@ -91,6 +105,11 @@
   }
 
   h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15em;
+    flex-wrap: wrap;
     font-family: "Aref Ruqaa", serif;
     font-size: clamp(60px, 11vw, 140px);
     line-height: 1.1;
@@ -98,12 +117,16 @@
     margin: 0;
   }
 
+  h1 span {
+    display: inline-block;
+  }
+
   .amp {
-    display: block;
+    display: inline-block;
     font-size: .42em;
     color: var(--gold);
     line-height: 1.3;
-    margin: 15px 0;
+    margin: 0;
   }
 
   .date-line {
@@ -163,7 +186,7 @@
     margin: 55px auto 0;
     line-height: 1.9;
     color: var(--muted);
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .event-grid {
@@ -210,7 +233,7 @@
   }
 
   .place {
-    font-size: 13px;
+    font-size: 18px;
     color: var(--muted);
     line-height: 1.6;
   }
@@ -219,7 +242,7 @@
     display: block;
     color: var(--ink);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 24px;
   }
 
   .map-link {
@@ -307,7 +330,7 @@
 
   footer .names {
     font-family: "Aref Ruqaa", serif;
-    font-size: 48px;
+    font-size: 38px;
   }
 
   footer p {
@@ -332,14 +355,16 @@
 <body>
   <header class="hero">
     <div class="intro">
-      <div class="eyebrow">عائلة بوعلي و عائلة سعيِّد يتشرفو بدعوتكم للإحتفال بزواج إبنَيْهما </div>
+      <div class="eyebrow">
+        تتشرف<br>
+        عائلة بوعلي <span class="and">و</span> عائلة سعيِّد<br>
+        بدعوتكم للإحتفال بزواج إبنَيْهما
+      </div>
       <h1>
-        أسامة
+        <span>أسامة</span>
         <span class="amp">و</span>
-        مريم
+        <span>مريم</span>
       </h1>
-      <p class="invite-line">نتمنّاو تشاركونا فرحتنا<br></p>
-      <div class="date-line">13 أكتوبر 2026</div>
       <a class="scroll" href="#events">↓</a>
     </div>
   </header>
@@ -375,10 +400,6 @@
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dar+Bouraoui+Tunis" target="_blank" rel="noopener">البلاصة   ←</a>
         </article>
       </div>
-
-      <p class="closing">
-حضوركم يشرّفنا و يفرّحنا، ربي يفرح قلوبكم و يزين أيامكم
-      </p>
     </div>
   </section>
 
@@ -394,8 +415,9 @@
   </section>
 
   <footer>
-    <div class="names">أسامة ومريم</div>
-    <p>بكل الحب · أكتوبر 2026</p>
+    <div class="names">حضوركم يشرّفنا و يفرّحنا، ربي يديم الفرحة على دياركم و ديارنا
+
+</div>
   </footer>
 
   <script>
